@@ -41,6 +41,7 @@
 		"ubrn:android": "ubrn build android --config ubrn.config.yaml --and-generate",
 		"ubrn:checkout": "ubrn checkout --config ubrn.config.yaml",
 		"ubrn:clean": "rm -Rf cpp/ android/src/main/java ios/ src/Native* src/generated/ src/index.ts*",
+		"postinstall": "yarn ubrn:checkout && yarn ubrn:android --release && yarn ubrn:ios --release",
 		"example": "yarn workspace react-native-nostr-sdk-example",
 		"test": "jest",
 		"typecheck": "tsc",
