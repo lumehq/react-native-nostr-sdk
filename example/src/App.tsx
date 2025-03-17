@@ -1,12 +1,13 @@
 import { Text, View, StyleSheet } from 'react-native';
-import { multiply } from 'react-native-nostr-sdk';
+import { Keys } from 'react-native-nostr-sdk';
 
-const result = multiply(3, 7);
+const result = Keys.generate();
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text>Public Key: {result.publicKey().toHex()}</Text>
+      <Text>Secret Key: {result.secretKey().toHex()}</Text>
     </View>
   );
 }

@@ -43003,7 +43003,7 @@ const FfiConverterOptionalArrayArrayString = new FfiConverterOptional(
  */
 function uniffiEnsureInitialized() {
   // Get the bindings contract version from our ComponentInterface
-  const bindingsContractVersion = 26;
+  const bindingsContractVersion = 29;
   // Get the scaffolding contract version by calling the into the dylib
   const scaffoldingContractVersion =
     nativeModule().ubrn_ffi_nostr_sdk_ffi_uniffi_contract_version();
